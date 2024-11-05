@@ -1,0 +1,33 @@
+---
+- name: Install Apache and Deploy Engaging Website
+  hosts: ubuntu_vms
+  become: true  # Use sudo for installation
+
+  vars_files:
+    - sudo-passwords.yml  # To handle sudo passwords (if needed)
+
+  tasks:
+    - name: Install Apache2 web server
+      apt:
+        name: apache2
+        state: present
+        update_cache: yes
+
+    - name: Copy index.html to Apache web server's document root
+      copy:
+        src: website/index.html
+        dest: /var/www/html/index.html
+        owner: www-data
+        group: www-data
+        mode: '0644'
+
+    - name: Ensure Apache2 is started and enabled
+      systemd:
+        name: apache2
+        state: started
+        enabled: true
+
+    - name: Open firewall for Apache
+      ufw:
+        rule: allow
+        name: 'Apache'

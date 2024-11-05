@@ -1,1 +1,10 @@
-ansible-playbooks/sudo-passwords.yml
+# Ignore Ansible vault password files
+sudo-passwords.yml
+
+# Ignore any other sensitive files you don't want in the repo
+.env
+.ssh/
+
+# Ignore system files
+*.swp
+.DS_Store
