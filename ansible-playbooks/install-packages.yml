@@ -1,0 +1,22 @@
+---
+- name: Install git, apache2, and net-tools on Ubuntu VMs
+  hosts: ubuntu_vms
+  become: true
+  vars_files:
+    - sudo-passwords.yml  # Include the encrypted vault file
+
+  tasks:
+    - name: Install git
+      apt:
+        name: git
+        state: present
+
+    - name: Install apache2
+      apt:
+        name: apache2
+        state: present
+
+    - name: Install net-tools
+      apt:
+        name: net-tools
+        state: present
