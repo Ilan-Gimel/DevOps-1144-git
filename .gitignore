@@ -12,6 +12,8 @@ ansible.log
 .DS_Store
 # Ignore hosts.ini file
 hosts.ini
+#Ignore ansible.cfg file
+ansible.cfg
 
 
 #George Floyd CreepyPasta Vol 1 50+ Breathtaking Horror Stories 
