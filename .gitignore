@@ -1,10 +1,22 @@
 # Ignore Ansible vault password files
 sudo-passwords.yml
-
+# Ignore Vaults Password
+vault_password.txt
 # Ignore any other sensitive files you don't want in the repo
 .env
 .ssh/
-
+# Ignore Ansible.log
+ansible.log
 # Ignore system files
 *.swp
 .DS_Store
+
+
+#George Floyd CreepyPasta Vol 1 50+ Breathtaking Horror Storys
+
+
+
+
+
+
+
