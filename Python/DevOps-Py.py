@@ -96,3 +96,43 @@ print(list_sqrt)
 list_item=['mango','mango','mango','banana','mango','banana']
 print(list_item.count('mango'))
 print(list_item.count('banana'))
+
+#Ex 19
+numbers_1=[1,2,3]
+numbers_2=[4,5,6]
+numbers_1+=numbers_2
+print(numbers_1)
+numbers_1.append(4)
+print(numbers_1)
+
+#Ex 20
+#Version 1.0
+def remove(lst,value):
+    for i in range(len(lst)-1,-1,-1):
+        if (lst[i]==value):
+            lst.pop(i)
+#Version 2.0
+def remove2(lst,num):
+    while num in lst:
+        lst.remove(num)
+#Version 3.0        
+def remove3(lst, num):
+    lst[:] = list(filter(lambda x: x != num, lst))
+#Version 4.0
+def remove4(lst,num):
+    lst[:]=[x for x in lst if x != num]
+
+remove(numbers_1,4)
+print(numbers_1)
+
+print(list(range(7,0,-1)))
+
+
+#Ex 21
+#Bubble Sort
+ass_num=[4,9,23,5,3,9,12]
+for i in range(len(ass_num)):
+    for j in range(len(ass_num) -i -1):
+        if(ass_num[j]>ass_num[j+1]):
+            ass_num[j],ass_num[j+1]=ass_num[j+1],ass_num[j]
+print(ass_num)
