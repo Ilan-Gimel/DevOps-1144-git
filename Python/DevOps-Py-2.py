@@ -20,7 +20,7 @@ print(numbers.index(3))
 
 #                  Dictionaries               #
 # Ex 1
-student={'name' : 'George','age' : 21,'grade' : 'Nigger'}
+student={'name' : 'George','age' : 21,'grade' : 'N'}
 print(student['name'])
 student['school'] = 'Ben Zvi'
 print(student)
@@ -38,6 +38,9 @@ print('grade' in student)
 capitals={'France' : 'Paris','Spain' : 'Madrid','Japan' : 'Tokyo'}
 for country,capital in capitals.items():
     print(f'Country is {country} Capital is {capital}')
+#Version 2.0 
+for key in capitals.keys():
+    print(f'country {key} capital {capitals[key]}')
 
 #Ex 4
 print(capitals.values())
@@ -58,7 +61,7 @@ print(output)
 #Version 2.0
 tex='hello'
 outputty={}
-for chr in text:
+for chr in tex:
     if chr in outputty:
         outputty[chr]+=1
     else:
