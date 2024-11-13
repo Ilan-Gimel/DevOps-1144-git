@@ -68,8 +68,32 @@ print(outputty)
 #                Sets                  #
 
 #Ex 1
-my_set={'1','2','3','4','5'}
-my_set.update('6')
+my_set={1,2,3,4,5}
+my_set.add(6)
+my_set.add(3)
+my_set.remove(2)
 print(my_set)
 
- 
+#Ex 2
+set_A={1,2,3,4}
+set_B={3,4,5,6}
+set_C=set_A.union(set_B)
+print(set_C)
+set_C=set_A.intersection(set_B)
+print(set_C)
+set_C=set_A.difference(set_B)
+print(set_C)
+set_C=set_A.symmetric_difference(set_B)
+print(set_C)
+
+#Ex 3
+numbers_lst=[1,2,2,3,4,4,5]
+set_dup=set()
+set_dup.update(numbers_lst)
+print(set_dup)
+
+#Ex 4
+print(3 in set_A)
+print(6 not in set_A)
+
+
