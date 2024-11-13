@@ -110,7 +110,7 @@ def multi_table(num:int):
         else:
             print(i,' ',end='')
     print()
-    print('-------------------------------')
+    print('-'*num*4)
     for j in range(1,11):
         if(j<=9):
             print(j,' |',end='')
@@ -126,7 +126,20 @@ def multi_table(num:int):
             else:
                 print(k,'',end='')
         print()
+    
 
 
 multi_help=int(input("Enter Number for Multi Table"))
 multi_table(multi_help)
+
+# def fac(n):
+#     if n<0:
+#         return('no')
+#     if n==0:
+#         return 0
+#     if n==1:
+#         return 1
+#     return n*fac(n-1)
+# print(fac(5))
+
+
