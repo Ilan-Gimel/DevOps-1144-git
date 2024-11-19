@@ -19,6 +19,8 @@ ansible.cfg
 #George Floyd CreepyPasta Vol 1 50+ Breathtaking Horror Stories 
 #Ignore Exer1 Python Files Exercise
 Exer1.txt
+#Ignore .csv files
+SpeedTest.csv
 
 
 
